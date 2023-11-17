@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #dab6d3, #6ea09a, #ca9a9a, #7075b0); /* Dark rainbow background */
+    color: #fff; /* Light text color */
+  }
+  
+  header {
+    background-color: #dbc2c2; /* Dark header background color */
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-container img {
+    height: 7%;
+    width: 7%;
+    border-radius: 50%;
+    margin-right: 10px; /* Add some spacing between the logo and text */
+  }
+  
+  .aimer {
+    font-size: 20px; /* Adjust the font size as needed */
+  }
+  
+  nav {
+    display: flex;
+  }
+  
+  .nav-icon {
+    width: 20px; /* Adjust the size as needed */
+    height: 20px; /* Adjust the size as needed */
+    margin-right: 5px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    padding: 0 8px; /* Adjust padding as needed */
+    background-color: #59227e; /* Dark background color for the button */
+    border: none; /* Remove border */
+    border-radius: 10px; /* Add rounded corners to the button */
+    cursor: pointer; /* Add a pointer cursor for better interaction */
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+  }
+  
+  nav a:hover {
+    background-color: #3d3d3d; /* Darker background color on hover */
+  }
+  
+  nav a img {
+    margin-right: 5px;
+  }
+  
+  
+  .hero {
+    text-align: center;
+    padding: 210px;
+    background: url('https://img.freepik.com/free-vector/work-home-concept-flat-design_1308-94817.jpg?w=1380&t=st=1699989921~exp=1699990521~hmac=69d561da9a6907c79e910a87f3cadac233a86e0056d6657b90b279f2f5fd54fa') 
+    center/cover no-repeat; /* Replace 'hero-image.jpg' with your image URL */
+    color: #ab2929;
+  }
+  
+  .hero p {
+    width: 68ch;
+  animation: typing 2s steps(30), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 5px solid;
+  font-family: monospace;
+  margin: 0 auto;
+  font-size: 1.5em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+  .hero h1 {
+    font-size: 35px;
+    margin-bottom: 30px;
+  }
+  
