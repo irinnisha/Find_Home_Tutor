@@ -9,7 +9,7 @@
 <body>
 
     <div class="container">
-        <form>
+        <form id="registrationForm">
             <h2>Register</h2>
             
             <div class="role-container">
@@ -25,14 +25,11 @@
                 </label>
             </div>
 
-            <div class="steps">
-                <div class="step-container">
-                    <div class="step">Step 1</div>
-                    <div class="connector"></div>
-                </div>
-                <div class="step">2</div>
-                <div class="step">3</div>
-                <div class="step">4</div>
+            <div class="progress-bar">
+                <div class="progress" id="progress1"></div>
+                <div class="progress" id="progress2"></div>
+                <div class="progress" id="progress3"></div>
+                <div class="progress" id="progress4"></div>
             </div>
 
             <div class="personal-info">
@@ -49,7 +46,33 @@
                 <input type="text" id="facebook" name="facebook" placeholder="Enter your Facebook username">
             </div>
 
-            <button type="submit" class="login-button">Next →</button>
+            <div class="location-info" id="locationInfo">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" placeholder="Enter your address">
+
+                <label for="division">Division:</label>
+                <select id="division" name="division">
+                    <option value="select">Select</option>
+                    <!-- Add more options as needed -->
+                </select>
+
+                <label for="district">District:</label>
+                <select id="district" name="district">
+                    <option value="select">Select</option>
+                    <!-- Add more options as needed -->
+                </select>
+
+                <label for="subDistrict">Sub District:</label>
+                <select id="subDistrict" name="subDistrict">
+                    <option value="select">Select</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+
+            <div class="navigation-buttons">
+                <button type="button" class="back-button" onclick="showStep(1)">← Back</button>
+                <button type="button" class="next-button" onclick="showStep(3)">Next →</button>
+            </div>
         </form>
 
         <div class="trouble-login">
