@@ -65,3 +65,120 @@ body {
   nav a img {
     margin-right: 5px;
   }
+
+  .explore a{
+    color: rgb(17, 17, 17);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px; /* Adjust padding as needed */
+    background-color:#e4867f; /* Dark background color for the button */
+    border: none; /* Remove border */
+    border-radius: 10px; /* Add rounded corners to the button */
+    cursor: pointer; /* Add a pointer cursor for better interaction */
+  }
+
+
+  .explore a img{
+    margin-right: 5px;
+   }
+
+   .ex-icon {
+    width: 20px; /* Adjust the size as needed */
+    height: 20px; /* Adjust the size as needed */
+    margin-right: 5px;
+  }
+
+  .tution{
+    color: hsl(0, 0%, 0%);
+    margin-left: 310px;
+    margin-top: 30px;
+    font-size: 30px;
+    font-family: monospace;
+  }
+  .filter-section{
+  display: flex;
+  margin-left: 300px;
+  margin-top: 10px;
+
+  }
+
+  .sec-icon{
+    width: 20px; /* Adjust the size as needed */
+    height: 20px; /* Adjust the size as needed */
+    margin-right: 5px;
+
+  }
+
+  .filter-section a{
+    color: rgb(16, 15, 15);
+    text-decoration: none;
+    margin: 0 9px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    padding: 1px 3px; /* Adjust padding as needed */
+    background-color:rgb(164, 190, 235); /* Dark background color for the button */
+    border: none; /* Remove border */
+    border-radius: 10px; /* Add rounded corners to the button */
+    cursor: pointer; /* Add a pointer cursor for better interaction */
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+
+  }
+
+  .filter-section a:hover {
+    background-color: #e4867f; /* Darker background color on hover */
+  }
+  
+  .filter-section a img {
+    margin-right: 5px;
+  }
+
+
+  .tuition-list {
+    margin-left: 300px;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .tuition-post {
+    border: 1px solid #f6eded;
+    padding: 7px;
+    margin: 10px;
+    border-radius: 8px;
+    width: 500px; /* Adjust the width as needed */
+    
+    background-color: white;
+    color: black;
+  }
+  
+  .tuition-post h2 {
+    margin-top: 0;
+  }
+  
+  .contact-button {
+    background-color: rgb(231, 111, 111);
+    color: #161414;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .women-icon{
+    width: 20px; /* Adjust the size as needed */
+    height: 20px; /* Adjust the size as needed */
+    margin-right: 5px;
+  }
+
+  .button{
+    background-color: rgb(164, 190, 235);
+    border: none;
+    padding: 3px;
+    border-radius: 5px;
+    margin: 3px;
+  }
+  
