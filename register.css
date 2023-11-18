@@ -29,33 +29,50 @@ h2 {
     color: #333;
 }
 
-.role-images {
+.role-container {
     display: flex;
     justify-content: space-around;
     margin-bottom: 20px;
 }
 
-.role-images img {
+.role {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.role input {
+    display: none;
+}
+
+.role img {
     width: 120px;
     height: 120px;
     cursor: pointer;
     border: 2px solid transparent;
     border-radius: 8px;
+    margin-bottom: 5px;
     position: relative;
     transition: border 0.3s ease;
 }
 
-.role-images img.selected {
+.role img:hover {
+    border-color: #e45555;
+}
+
+.role input:checked + img {
     border-color: #4caf50;
     background: linear-gradient(rgba(76, 175, 80, 0.5), rgba(76, 175, 80, 0.5));
 }
 
-.role-images img:hover {
-    border-color: #ddd;
+.role-label {
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease;
 }
 
-.role-images img.selected:hover {
-    border-color: #4caf50;
+.role input:checked + .role-label {
+    color: blue; /* Change to blue when Tutor is selected */
 }
 
 .steps {
@@ -112,7 +129,7 @@ input {
 }
 
 button {
-    background-color: #4caf50;
+    background-color: #4caf50; /* Initial background color */
     color: #fff;
     padding: 10px;
     border: none;
@@ -123,7 +140,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #45a049; /* Change to green when Tutor is selected */
 }
 
 .trouble-login {
