@@ -35,7 +35,7 @@
 
             <button type="submit" class="login-button">Login →</button>
 
-            <p>Don't have an account? <a href="register.html">Join Now</a>.</p>
+            <p>Don't have an account? <a href="#" id="joinNowLink">Join Now</a>.</p>
         </form>
 
         <div class="trouble-login">
@@ -50,6 +50,17 @@
           </p>
         </div>
     </div>
+
+    <script>
+        document.getElementById('joinNowLink').addEventListener('click', function() {
+            var selectedRole = document.querySelector('input[name="role"]:checked');
+            if (selectedRole) {
+                window.location.href = selectedRole.value + 'Register.html';
+            } else {
+                alert('Please select a role before joining.');
+            }
+        });
+    </script>
 
 </body>
 </html>
