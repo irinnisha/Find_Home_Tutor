@@ -185,10 +185,20 @@ button:hover {
 }
 
 .help-terms {
-    margin-top: 20px;
+    text-align: center;
+    display: inline;
+    color: #000000;
 }
 
+.help-terms a.facebook-icon{
+  margin-left: 15px;
+}
+.help-terms  img{
+  width: 30px;
+  height: 30px;
+}
 .dot-sign {
-    font-size: 1.5em;
-    margin: 0 5px;
+  font-size: 1.5em;
+  margin: 0 5px;
+  color: #000000;
 }
