@@ -7,29 +7,28 @@
     <title>Multi-Step Progressive Form</title>
 </head>
 <body>
-    <div class="role-container">
-        <label class="role">
-            <input type="radio" name="role" value="Student">
-            <img src="Image/student.png" alt="Student">
-            <span class="role-label">Student</span>
-        </label>
-        <label class="role">
-            <input type="radio" name="role" value="Tutor">
-            <img src="Image/teacher.png" alt="Tutor">
-            <span class="role-label">Tutor</span>
-        </label>
-    </div>
-
-    <div class="progress-bar">
-        <div class="progress" id="progress1"></div>
-        <div class="progress" id="progress2"></div>
-        <div class="progress" id="progress3"></div>
-        <div class="progress" id="progress4"></div>
-    </div>
+    <div class="form-container">
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
 
         <form id="multiStepForm" class="multi-step-form">
+
             <div class="form-step" data-step="1">
-                <h2>Personal Information:</h2>
+                <h2>Step 1</h2>
+                <div class="role-container">
+                <label class="role">
+                    <input type="radio" name="role" value="Student">
+                    <img src="Image/student.png" alt="Student">
+                    <span class="role-label">Student</span>
+                </label>
+                <label class="role">
+                    <input type="radio" name="role" value="Tutor">
+                    <img src="Image/teacher.png" alt="Tutor">
+                    <span class="role-label">Tutor</span>
+                </label>
+            </div>
+
                 <!-- Step 1 Form Fields -->
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -48,6 +47,18 @@
 
             <div class="form-step" data-step="2">
                 <h2>Step 2</h2>
+                <div class="role-container">
+                    <label class="role">
+                        <input type="radio" name="role" value="Student">
+                        <img src="Image/student.png" alt="Student">
+                        <span class="role-label">Student</span>
+                    </label>
+                    <label class="role">
+                        <input type="radio" name="role" value="Tutor">
+                        <img src="Image/teacher.png" alt="Tutor">
+                        <span class="role-label">Tutor</span>
+                    </label>
+                </div>
                 <!-- Step 2 Form Fields -->
                 <label for="address">Address:</label>
                 <input type="text" id="address" name="address" placeholder="Enter your current address" required>
@@ -67,6 +78,19 @@
 
             <div class="form-step" data-step="3">
                 <h2>Step 3</h2>
+                <div class="role-container">
+                    <label class="role">
+                        <input type="radio" name="role" value="Student">
+                        <img src="Image/student.png" alt="Student">
+                        <span class="role-label">Student</span>
+                    </label>
+                    <label class="role">
+                        <input type="radio" name="role" value="Tutor">
+                        <img src="Image/teacher.png" alt="Tutor">
+                        <span class="role-label">Tutor</span>
+                    </label>
+                </div>
+
                 <!-- Step 3 Form Fields -->
                 <label for="institution">Institution:</label>
                 <input type="text" id="institution" name="institution" placeholder="Enter your institution name" required>
@@ -86,6 +110,18 @@
 
             <div class="form-step" data-step="4">
                 <h2>Step 4</h2>
+                <div class="role-container">
+                    <label class="role">
+                        <input type="radio" name="role" value="Student">
+                        <img src="Image/student.png" alt="Student">
+                        <span class="role-label">Student</span>
+                    </label>
+                    <label class="role">
+                        <input type="radio" name="role" value="Tutor">
+                        <img src="Image/teacher.png" alt="Tutor">
+                        <span class="role-label">Tutor</span>
+                    </label>
+                </div>
                 <!-- Step 4 Form Fields -->
                 
                 <label for="perclassfee">Preferred Fee(per class):</label>
@@ -111,6 +147,19 @@
 
             <div class="form-step" data-step="5">
                 <h2>Step 5</h2>
+
+                <div class="role-container">
+                    <label class="role">
+                        <input type="radio" name="role" value="Student">
+                        <img src="Image/student.png" alt="Student">
+                        <span class="role-label">Student</span>
+                    </label>
+                    <label class="role">
+                        <input type="radio" name="role" value="Tutor">
+                        <img src="Image/teacher.png" alt="Tutor">
+                        <span class="role-label">Tutor</span>
+                    </label>
+                </div>
                 <!-- Step 5 Form Fields -->
                 <label>upload Student ID:
                     <input type="file" name="mystudentid" accept="image/png, image/gif, image/jpeg" />
