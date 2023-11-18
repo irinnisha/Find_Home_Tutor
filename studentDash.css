@@ -7,12 +7,11 @@ body {
   
   header {
     background: linear-gradient(to right, #6a737c,#bfcfe1,#aad2dd,#73bbba,#4faca1);
-    padding:0.5px;
+    padding: 0.5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  
   
   .logo-container {
     display: flex;
@@ -36,7 +35,7 @@ body {
   nav {
     display: flex;
   }
-  
+
   .nav-icon {
     width: 20px; /* Adjust the size as needed */
     height: 20px; /* Adjust the size as needed */
@@ -44,69 +43,24 @@ body {
   }
   
   nav a {
-    color: rgb(255, 255, 255);
+    color: #fff;
     text-decoration: none;
     margin: 0 15px;
-    font-size: 15px;
+    font-size: 13px;
     display: flex;
     align-items: center;
-    padding: 2px 15px; /* Adjust padding as needed */
+    padding: 0 8px; /* Adjust padding as needed */
     background-color: #000000; /* Dark background color for the button */
     border: none; /* Remove border */
     border-radius: 10px; /* Add rounded corners to the button */
     cursor: pointer; /* Add a pointer cursor for better interaction */
-    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+    transition: background-color 0.3s ease; 
   }
-  
   nav a:hover {
     background-color: #e4867f; /* Darker background color on hover */
   }
-  
   nav a img {
     margin-right: 5px;
-  }
-  
-  
-  .hero {
-    padding: 230px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("Image/cover.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-  }
-  .hero h1{
-    text-align: center;
-    color: #000000;
-  }
-  
-  .hero p {
-    width: 68ch;
-  animation: typing 2s steps(30), blink .5s step-end infinite alternate;
-  align-items: center;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 5px solid;
-  font-family: monospace;
-  margin: 0 auto;
-  font-size: 1.5em;
-  color: #E8CE4D;
-}
-
-@keyframes typing {
-  from {
-    width: 0
-  }
-}
-    
-@keyframes blink {
-  50% {
-    border-color: transparent
-  }
-}
-  .hero h1 {
-    font-size: 35px;
-    margin-bottom: 30px;
   }
 
   .help-terms {
@@ -127,4 +81,3 @@ body {
   margin: 0 5px;
   color: #000000;
 }
-  
