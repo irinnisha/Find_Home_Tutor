@@ -15,7 +15,7 @@
         <form id="multiStepForm" class="multi-step-form">
 
             <div class="form-step" data-step="1">
-                <h2>Personal Information</h2>
+                <h2>Step 1</h2>
                 <div class="role-container">
                 <label class="role">
                     <input type="radio" name="role" value="Student">
@@ -46,7 +46,7 @@
             </div>
 
             <div class="form-step" data-step="2">
-                <h2>Location Info</h2>
+                <h2>Step 2</h2>
                 <div class="role-container">
                     <label class="role">
                         <input type="radio" name="role" value="Student">
@@ -77,7 +77,7 @@
             </div>
 
             <div class="form-step" data-step="3">
-                <h2>Educational Info</h2>
+                <h2>Step 3</h2>
                 <div class="role-container">
                     <label class="role">
                         <input type="radio" name="role" value="Student">
@@ -95,59 +95,26 @@
                 <label for="institution">Institution:</label>
                 <input type="text" id="institution" name="institution" placeholder="Enter your institution name" required>
 
-                <label for="department">Department(short form):</label>
-                <input type="text" id="department" name="department" placeholder="Enter your department name" required>
-                
-                <label for="graduated">graduated:</label>
-                <select name="graduated" id="graduated">
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
+                <label for="class">Class:</label>
+                <select name="class" id="division">
+                    <option value="five">5</option>
+                    <option value="six">6</option>
+                    <option value="seven">7</option>
+                    <option value="eight">8</option>
+                    <option value="nine">9</option>
+                    <option value="ten">10</option>
+                    <option value="eleven">11</option>
+                    <option value="twelve">12</option>
+                    <option value="admission">Admission</option>
                 </select>
                 <!-- Previous and Next buttons -->
                 <button class="prev-btn" data-step="2">Previous</button>
                 <button class="next-btn" data-step="4">Next</button>
             </div>
-
-            <div class="form-step" data-step="4">
-                <h2>Tuition Info</h2>
-                <div class="role-container">
-                    <label class="role">
-                        <input type="radio" name="role" value="Student">
-                        <img src="Image/student.png" alt="Student">
-                        <span class="role-label">Student</span>
-                    </label>
-                    <label class="role">
-                        <input type="radio" name="role" value="Tutor">
-                        <img src="Image/teacher.png" alt="Tutor">
-                        <span class="role-label">Tutor</span>
-                    </label>
-                </div>
-                <!-- Step 4 Form Fields -->
-                
-                <label for="perclassfee">Preferred Fee(per class):</label>
-                <input type="number" id="perclassfee" name="perclassfee" required>
-
-                <label for="tuitionexyear">Tuition Experience:</label>
-                <select name="tuitionexyear" id="tuitionexyear">
-                    <option value="one">1 year</option>
-                    <option value="two">2 year</option>
-                    <option value="three">3 year+</option>
-
-
-                <label for="permonthfee">Preferred Fee(per month):</label>
-                <input type="number" id="permonthfee" name="permonthfee" required>
-
-                <label for="notutored">No. of Students tutored:</label>
-                <input type="number" id="notutored" name="notutored" required>
-                
-                <!-- Add your form fields for step 4 here -->
-                <button class="prev-btn" data-step="3">Previous</button>
-                <button class="next-btn" data-step="5">Next</button>
-            </div>
+        
 
             <div class="form-step" data-step="5">
-                <h2>Verification</h2>
-
+                <h2>Step 4</h2>
                 <div class="role-container">
                     <label class="role">
                         <input type="radio" name="role" value="Student">
@@ -161,17 +128,13 @@
                     </label>
                 </div>
                 <!-- Step 5 Form Fields -->
-                <label>upload Student ID:
-                    <input type="file" name="mystudentid" accept="image/png, image/gif, image/jpeg" />
-                  </label>
-
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password"required>
 
                 <label for="confirmpassword">Confirm password:</label>
                 <input type="password" id="confirmpassword" name="confirmpassword"required>
                 <!-- Add your form fields for step 5 here -->
-                <button class="prev-btn" data-step="4">Previous</button>
+                <button class="prev-btn" data-step="3">Previous</button>
                 <button type="submit">Submit</button>
             </div>
         </form>
