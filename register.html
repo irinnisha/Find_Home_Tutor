@@ -12,9 +12,17 @@
         <form>
             <h2>Register</h2>
             
-            <div class="role-images">
-                <img src="Image/student.png" alt="Student" onclick="selectRole('Student', this)">
-                <img src="Image/teacher.png" alt="Teacher" onclick="selectRole('Teacher', this)">
+            <div class="role-container">
+                <label class="role">
+                    <input type="radio" name="role" value="Student">
+                    <img src="Image/student.png" alt="Student">
+                    <span class="role-label">Student</span>
+                </label>
+                <label class="role">
+                    <input type="radio" name="role" value="Tutor">
+                    <img src="Image/teacher.png" alt="Tutor">
+                    <span class="role-label">Tutor</span>
+                </label>
             </div>
 
             <div class="steps">
@@ -39,10 +47,9 @@
 
                 <label for="facebook">Facebook:</label>
                 <input type="text" id="facebook" name="facebook" placeholder="Enter your Facebook username">
-
             </div>
 
-            <button type="submit" onclick="submitForm()">Next →</button>
+            <button type="submit" class="login-button">Next →</button>
         </form>
 
         <div class="trouble-login">
@@ -53,25 +60,6 @@
             <p>Help <span class="dot-sign">•</span> Terms of Service</p>
         </div>
     </div>
-
-    <script>
-        var selected_role = '';
-
-        function selectRole(role, element) {
-            document.querySelectorAll('.role-images img').forEach(img => {
-                img.classList.remove('selected');
-            });
-            element.classList.add('selected');
-            selected_role = role;
-        }
-
-        function submitForm() {
-            // Use the selected_role variable as needed
-            console.log('Selected role: ' + selected_role);
-
-            // Add further form submission logic here
-        }
-    </script>
 
 </body>
 </html>
