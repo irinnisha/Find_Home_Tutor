@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-family: 'Arial', sans-serif;
     background: linear-gradient(to right, #2e5539,#4a9862,#4ead85,#46b5a7,#4ebfc4,#92ced1 ); /* Dark rainbow background */
-    color: #fff; /* Light text color */
+    color: #fff; 
   }
   
   header {
@@ -23,14 +23,14 @@ body {
     height: 7%;
     width: 7%;
     border-radius: 50%;
-    margin-right: 10px; /* Add some spacing between the logo and text */
+    margin-right: 10px; 
   }
   
   h1 {
     margin: 0;
-    font-size: 24px; /* Adjust the font size as needed */
+    font-size: 24px; 
     font-family: monospace;
-    color: #fff; /* Text color for the website name */
+    color: #fff; 
   }
   
   nav {
@@ -38,8 +38,8 @@ body {
   }
   
   .nav-icon {
-    width: 20px; /* Adjust the size as needed */
-    height: 20px; /* Adjust the size as needed */
+    width: 20px; 
+    height: 20px; 
     margin-right: 5px;
   }
   
@@ -50,16 +50,16 @@ body {
     font-size: 15px;
     display: flex;
     align-items: center;
-    padding: 2px 15px; /* Adjust padding as needed */
-    background-color: #000000; /* Dark background color for the button */
-    border: none; /* Remove border */
-    border-radius: 10px; /* Add rounded corners to the button */
-    cursor: pointer; /* Add a pointer cursor for better interaction */
-    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+    padding: 2px 15px; 
+    background-color: #000000; 
+    border: none;
+    border-radius: 10px;
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
   }
   
   nav a:hover {
-    background-color: #e4867f; /* Darker background color on hover */
+    background-color: #e4867f; 
   }
   
   nav a img {
