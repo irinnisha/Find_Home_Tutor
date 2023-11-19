@@ -1,8 +1,11 @@
 <?php
-$servername = "localhost:3306"; 
+ //require_once('db_connection.php');
+
+// Assuming your database connection is established, replace the following with your actual connection code
+$servername = "localhost:3306";
 $username = "root";
-//$password = "your_mysql_password"; 
-$dbname = "Find_Home_Tutor";   
+$password = "";
+$dbname = "Find_Home_Tutor";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -12,23 +15,27 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+// Process registration form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Step 1 data
     $role = $_POST["role"];
     $email = $_POST["email"];
-    $password = $_POST["password"];
+    $password = password_hash($_POST["password"], PASSWORD_DEFAULT); // Hash the password
 
-    // Hash the password (for security, consider using a stronger hashing algorithm and salting)
-    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+    // Insert data into 'users' table
+    $stmt = $conn->prepare("INSERT INTO users (role, email, password) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $role, $email, $password);
 
-    // Insert data into the database
-    $sql = "INSERT INTO users (role, email, password) VALUES ('$role', '$email', '$hashedPassword')";
-
-    if ($conn->query($sql) === TRUE) {
+    // Check if the insertion was successful
+    if ($stmt->execute()) {
         echo "Registration successful!";
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $stmt->error;
     }
+
+    $stmt->close();
 }
 
+// Close the database connection
 $conn->close();
 ?>
