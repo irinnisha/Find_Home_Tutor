@@ -12,7 +12,7 @@
             <div class="progress" id="progress"></div>
         </div>
 
-        <form id="multiStepForm" class="multi-step-form">
+        <form action="process_registration.php" method="post" class="multi-step-form">
 
             <div class="form-step" data-step="1">
                 <h2>Personal Information</h2>
@@ -130,9 +130,9 @@
                 <label for="tuitionexyear">Tuition Experience:</label>
                 <select name="tuitionexyear" id="tuitionexyear">
                     <option value="one">1 year</option>
-                    <option value="two">2 year</option>
-                    <option value="three">3 year+</option>
-
+                    <option value="two">2 years</option>
+                    <option value="three">3 years or more</option>
+                </select>
 
                 <label for="permonthfee">Preferred Fee(per month):</label>
                 <input type="number" id="permonthfee" name="permonthfee" required>
@@ -163,7 +163,7 @@
                 <!-- Step 5 Form Fields -->
                 <label>upload Student ID:
                     <input type="file" name="mystudentid" accept="image/png, image/gif, image/jpeg" />
-                  </label>
+                </label>
 
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password"required>
