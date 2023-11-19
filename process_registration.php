@@ -1,8 +1,8 @@
 <?php
-$servername = "your_mysql_server"; // Replace with your MySQL server name
-$username = "your_mysql_username"; // Replace with your MySQL username
-$password = "your_mysql_password"; // Replace with your MySQL password
-$dbname = "your_mysql_database";   // Replace with your MySQL database name
+$servername = "localhost:3306"; 
+$username = "root";
+//$password = "your_mysql_password"; 
+$dbname = "Find_Home_Tutor";   
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
