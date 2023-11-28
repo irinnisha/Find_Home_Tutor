@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="schdulingcreate.css">
+    <title>Tuition Scheduling</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+          <img src="Image/logo.jpeg" alt="AimerS Logo">
+          <h1 class="aimer">Aimer'S</h1>
+        </div>
+        <nav>
+          <a href="#"><img src="Image/account.png" alt="Account" class="nav-icon">Account</a>
+          <a href="#"><img src="Image/request.png" alt="Request" class="nav-icon">Request</a>
+          <a href="#"><img src="Image/schduling.png" alt="Schduling" class="nav-icon">Schduling</a>
+          <a href="#"><img src="Image/explore.png" alt="Explore" class="nav-icon">Explore</a>
+          <a href="#"><img src="Image/post.png" alt="Post A Tuition" class="nav-icon">Post A Tuition</a>
+          <a href="#"><img src="Image/logout.png" alt="Logout" class="nav-icon">Logout</a>
+        </nav>
+      </header>
+      
+    <div id="app">
+        <h1>Tuition Scheduling</h1>
+
+        <!-- Tuition Form -->
+        <div class="tuitionForm">
+            <form>
+                <div class="tuitionClass">
+
+                <label for="tuitionClass">Tuition Class:</label>
+                <select name="class" id="class" required>
+                    <option value="" disabled selected>Select one</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="admission">Admission</option>
+                </select>
+            </div>
+
+            <div class="startTime">
+                <label for="startTime">Start Time:</label>
+                <input type="time" id="startTime" required>
+            </div>
+            
+
+                <div class="finishTime">
+                    <label for="finishTime">Finish Time:</label>
+                <input type="time" id="finishTime" required>
+                </div>
+
+                <div class="daysPerWeek">
+                    <label for="daysPerWeek">Days per Week:</label>
+                <input type="number" id="daysPerWeek" required>
+                </div>
+
+                <button type="button" onclick="addScheduling()">Add Scheduling</button>
+            </form>
+        </div>
+    </div>
+    <div id="schedulingList" class="scheduling-list">
+    </div>
+    <div class="help-terms">
+        <p>Help <span class="dot-sign">•</span> Terms of Service
+        <a href="https://www.facebook.com/hojoborolow" class="facebook-icon" target="_blank">
+          <img src="Image/facebook.png" alt="Facebook">
+        </a>
+      </p>
+    </div>
+    <script src="schdulingcreate.js"></script>
+</body>
+</html>
