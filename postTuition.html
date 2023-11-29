@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post A Tuitiion</title>
+  <link rel="stylesheet" href="postTuition.css">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="Image/logo.jpeg" alt="AimerS Logo">
+      <h1 class="aimer">Aimer'S</h1>
+    </div>
+    <nav>
+      <a href="#"><img src="Image/account.png" alt="Account" class="nav-icon">Account</a>
+      <a href="#"><img src="Image/request.png" alt="Request" class="nav-icon">Request</a>
+      <a href="#"><img src="Image/tutor.png" alt="Tutors" class="nav-icon">Tutors</a>
+      <a href="#"><img src="Image/explore.png" alt="Explore" class="nav-icon">Explore</a>
+      <a href="#"><img src="Image/post.png" alt="Post A Tuition" class="nav-icon">Post A Tuition</a>
+      <a href="#"><img src="Image/logout.png" alt="Logout" class="nav-icon">Logout</a>
+    </nav>
+  </header>
+
+  <div class="form-container">
+    <h1>Post A Tuition</h1>
+    <form id="multiStepForm" method="post" class="multi-step-form">
+
+        <div class="form-step" data-step="1">
+            <div class="role-container">
+                <label class="role">
+                    <img src="Image/details.png" alt="Student">
+                </label>
+            </div>
+
+            <!-- Step 1 Form Fields -->
+            <div class="input-container">
+            <label for="subject">Subject:</label>
+                <select name="subject" id="subject" required>
+                    <option value="" disabled selected>Select</option>
+                    <option value="all">All</option>
+                    <option value="bangla">Bangla</option>
+                    <option value="english">English</option>
+                    <option value="math">Math</option>
+                    <option value="physics">Physics</option>
+                    <option value="biology">Biology</option>
+                    <option value="chemistry">chemistry</option>
+                </select>
+
+                <label for="class">Class:</label>
+                <select name="class" id="class" required>
+                    <option value="" disabled selected>Select</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="admission">Admission</option>
+                </select>
+            </div>
+
+            <div class="input-container">
+                <label for="platform">You wanna read:</label>
+                <select name="platform" id="platform" required>
+                    <option value="" disabled selected>Select</option>
+                    <option value="online">Online</option>
+                    <option value="offline">offline</option>
+                </select>
+
+                <label for="duration">Duration:</label>
+                <select name="duration" id="duration" required>
+                    <option value="" disabled selected>Select</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="class-wise">class-wise</option>
+                </select>
+            </div>
+            <!-- Next button -->
+            <div>
+                <button class="next-btn" data-step="2">Next</button>
+            </div>
+        </div>
+
+        <div class="form-step" data-step="1">
+            <div class="role-container">
+                <label class="role">
+                    <img src="Image/details.png" alt="Student">
+                </label>
+            </div>
+            <!-- Step 2 Form Fields -->
+            <h2>Write Detalis:</h2>
+            <div class="tutionDetails">
+            <input type="text" id="tuitiondetail" name="detail" required>
+        </div>
+            <div>
+                <button class="prev-btn" data-step="1">Back</button>
+                <button class="next-btn" data-step="3">Next</button>
+            </div>
+            <!-- Previous and Next buttons -->
+            
+        </div>
+
+        <div class="form-step" data-step="1">
+            <div class="role-container">
+                <label class="role">
+                    <img src="Image/details.png" alt="Student">
+                </label>
+            </div>
+
+            <!-- Step 3 Form Fields -->
+            <h2>Payment details</h2>
+            <div class="paymentlabel">
+            <label for="payment">Payment details:</label>
+                <input type="number" id="ammount" required>
+            </div>
+            
+            <!-- Previous and Next buttons -->
+            <div>
+                <button class="prev-btn" data-step="2">Previous</button>
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+    </div>
+ 
+  <div class="help-terms">
+    <p>Help <span class="dot-sign">•</span> Terms of Service
+    <a href="https://www.facebook.com/hojoborolow" class="facebook-icon" target="_blank">
+      <img src="Image/facebook.png" alt="Facebook">
+    </a>
+  </p>
+</div>
+
+
+<script src="studentRegister.js"></script>
+</body>
+</html>
