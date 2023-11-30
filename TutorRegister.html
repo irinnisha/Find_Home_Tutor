@@ -3,22 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="tutorRegister.css">
+    <link rel="stylesheet" href="TutorRegister.css">
     <title>Register Form</title>
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="Image/logo.jpeg" alt="AimerS Logo">
-            <h1 class="aimer">Aimer'S</h1>
-        </div>
-        <nav>
-        <a href="#"><img src="Image/explore.png" alt="Explore" class="nav-icon"> Explore</a>
-        <a href="#"><img src="Image/tutor.png" alt="Tutors" class="nav-icon"> Tutors</a>
-        <a href="login.html"><img src="Image/login.png" alt="Login" class="nav-icon"> Login</a>
-        <a href="#"><img src="Image/post.png" alt="Post" class="nav-icon"> Post A Tuition</a>
-    </nav>
-    </header>
     <div class="form-container">
         <div class="progress-bar">
             <div class="progress" id="progress"></div>
@@ -26,20 +14,17 @@
 
         <form action="process_registration.php" method="post" class="multi-step-form">
 
-            <div class="form-step" data-step="1">
-                <h2>Personal Information</h2>
-                <div class="role-container">
-                <label class="role">
-                    <input type="radio" name="role" value="Student">
-                    <img src="Image/student.png" alt="Student">
-                    <span class="role-label">Student</span>
-                </label>
-                <label class="role">
-                    <input type="radio" name="role" value="Tutor">
-                    <img src="Image/teacher.png" alt="Tutor">
-                    <span class="role-label">Tutor</span>
-                </label>
-            </div>
+            
+<div class="form-step" data-step="1">
+    <h2>Personal Information</h2>
+    <div class="role-container">
+        <!-- Make the Tutor radio button pre-selected and disabled -->
+        <label class="role tutor-selected">
+            <input type="radio" name="role" value="Tutor" checked disabled>
+            <img src="Image/teacher.png" alt="Tutor">
+            <span class="role-label">Tutor</span>
+        </label>
+    </div>
 
                 <!-- Step 1 Form Fields -->
                 <label for="name">Name:</label>
@@ -60,11 +45,6 @@
             <div class="form-step" data-step="2">
                 <h2>Location Info</h2>
                 <div class="role-container">
-                    <label class="role">
-                        <input type="radio" name="role" value="Student">
-                        <img src="Image/student.png" alt="Student">
-                        <span class="role-label">Student</span>
-                    </label>
                     <label class="role">
                         <input type="radio" name="role" value="Tutor">
                         <img src="Image/teacher.png" alt="Tutor">
@@ -92,10 +72,6 @@
                 <h2>Educational Info</h2>
                 <div class="role-container">
                     <label class="role">
-                        <input type="radio" name="role" value="Student">
-                        <img src="Image/student.png" alt="Student">
-                        <span class="role-label">Student</span>
-                    </label>
                     <label class="role">
                         <input type="radio" name="role" value="Tutor">
                         <img src="Image/teacher.png" alt="Tutor">
@@ -123,11 +99,6 @@
             <div class="form-step" data-step="4">
                 <h2>Tuition Info</h2>
                 <div class="role-container">
-                    <label class="role">
-                        <input type="radio" name="role" value="Student">
-                        <img src="Image/student.png" alt="Student">
-                        <span class="role-label">Student</span>
-                    </label>
                     <label class="role">
                         <input type="radio" name="role" value="Tutor">
                         <img src="Image/teacher.png" alt="Tutor">
@@ -162,11 +133,6 @@
 
                 <div class="role-container">
                     <label class="role">
-                        <input type="radio" name="role" value="Student">
-                        <img src="Image/student.png" alt="Student">
-                        <span class="role-label">Student</span>
-                    </label>
-                    <label class="role">
                         <input type="radio" name="role" value="Tutor">
                         <img src="Image/teacher.png" alt="Tutor">
                         <span class="role-label">Tutor</span>
@@ -189,6 +155,6 @@
         </form>
     </div>
 
-    <script src="tutorRegister.js"></script>
+    <script src="teacherRegister.js"></script>
 </body>
 </html>

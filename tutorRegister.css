@@ -94,13 +94,13 @@ nav a img {
     align-items: center;
 }
 
-.role input {
+.role input[type="radio"] {
     display: none;
 }
 
 .role img {
-    width: 120px;
-    height: 120px;
+    width: 220px;
+    height: 150px;
     cursor: pointer;
     border: 2px solid transparent;
     border-radius: 8px;
@@ -110,13 +110,16 @@ nav a img {
     transition: border 0.3s ease;
 }
 
-.role img:hover {
-    border-color: #c34646;
+
+.role input[type="radio"]:checked + img {
+    opacity: 0.9; /* Adjust opacity as needed */
+    
 }
 
-.role input:checked + img {
-    border-color: #4caf50;
-    background: linear-gradient(rgba(76, 175, 80, 0.5), rgba(76, 175, 80, 0.5));
+.role.tutor-selected {
+    background-color: #4caf50; /* Set your desired background color */
+    color: white;           /* Set text color to contrast with the background */
+    cursor: not-allowed;    /* Show cursor as not-allowed for disabled button */
 }
 
 .role-label {

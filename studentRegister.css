@@ -27,13 +27,26 @@ body {
     align-items: center;
 }
 
-.role input {
-    display: none;
+.role input[value="Student"] {
+    display: none; /* Hide the default radio button */
+}
+
+.role label[for="student-radio"] {
+    background-color: green; /* Set the background color to green for the label */
+    color: white; /* Set the text color to white for better visibility */
+    padding: 8px; /* Add some padding for better styling */
+    border-radius: 4px; /* Add border-radius for rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.role input[value="Student"]:checked + label {
+    background-color: green; /* Set a different background color when the radio button is checked */
 }
 
 .role img {
-    width: 120px;
-    height: 120px;
+    width: 220px;
+    height: 150px;
     cursor: pointer;
     border: 2px solid transparent;
     border-radius: 8px;
@@ -41,15 +54,6 @@ body {
     justify-content: space-between;
     position: relative;
     transition: border 0.3s ease;
-}
-
-.role img:hover {
-    border-color: #c34646;
-}
-
-.role input:checked + img {
-    border-color: #4caf50;
-    background: linear-gradient(rgba(76, 175, 80, 0.5), rgba(76, 175, 80, 0.5));
 }
 
 .role-label {

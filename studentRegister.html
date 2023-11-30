@@ -12,20 +12,17 @@
             <div class="progress" id="progress"></div>
         </div>
         <form id="multiStepForm" action="process_registration.php" method="post" class="multi-step-form">
-
+            
             <div class="form-step" data-step="1">
-                <h2>Step 1</h2>
+                <h2>Personal Information</h2>
                 <div class="role-container">
+                    <!-- Make the Tutor radio button pre-selected and disabled -->
                     <label class="role">
-                        <input type="radio" name="role" value="Student">
+                        <input type="radio" name="role" value="Student" id="student-radio">
                         <img src="Image/student.png" alt="Student">
                         <span class="role-label">Student</span>
                     </label>
-                    <label class="role">
-                        <input type="radio" name="role" value="Tutor">
-                        <img src="Image/teacher.png" alt="Tutor">
-                        <span class="role-label">Tutor</span>
-                    </label>
+                    
                 </div>
 
                 <!-- Step 1 Form Fields -->
@@ -48,15 +45,11 @@
                 <h2>Step 2</h2>
                 <div class="role-container">
                     <label class="role">
-                        <input type="radio" name="role" value="Student">
+                        <input type="radio" name="role" value="Student" id="student-radio">
                         <img src="Image/student.png" alt="Student">
                         <span class="role-label">Student</span>
                     </label>
-                    <label class="role">
-                        <input type="radio" name="role" value="Tutor">
-                        <img src="Image/teacher.png" alt="Tutor">
-                        <span class="role-label">Tutor</span>
-                    </label>
+                    
                 </div>
                 <!-- Step 2 Form Fields -->
                 <label for="address">Address:</label>
@@ -79,15 +72,11 @@
                 <h2>Step 3</h2>
                 <div class="role-container">
                     <label class="role">
-                        <input type="radio" name="role" value="Student">
+                        <input type="radio" name="role" value="Student" id="student-radio">
                         <img src="Image/student.png" alt="Student">
                         <span class="role-label">Student</span>
                     </label>
-                    <label class="role">
-                        <input type="radio" name="role" value="Tutor">
-                        <img src="Image/teacher.png" alt="Tutor">
-                        <span class="role-label">Tutor</span>
-                    </label>
+                    
                 </div>
 
                 <!-- Step 3 Form Fields -->
@@ -118,11 +107,6 @@
                         <input type="radio" name="role" value="Student">
                         <img src="Image/student.png" alt="Student">
                         <span class="role-label">Student</span>
-                    </label>
-                    <label class="role">
-                        <input type="radio" name="role" value="Tutor">
-                        <img src="Image/teacher.png" alt="Tutor">
-                        <span class="role-label">Tutor</span>
                     </label>
                 </div>
                 <!-- Step 4 Form Fields -->
