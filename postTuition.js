@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function updateProgressBar(step) {
-        const steps = Array.from(document.querySelectorAll('.form-step'));
+        const steps = Array.from(document.querySelectorAll('.step'));
 
         steps.forEach((stepElem) => {
             const stepNumber = stepElem.dataset.step;

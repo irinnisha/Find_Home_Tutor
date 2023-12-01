@@ -7,9 +7,9 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh; /* Ensure the page takes at least the full height of the viewport */
-}
-
-header {
+  }
+  
+  header {
     background: linear-gradient(to right, #6a737c, #bfcfe1, #aad2dd, #73bbba, #4faca1);
     padding: 6px;
     display: flex;
@@ -18,38 +18,38 @@ header {
     width: 100%;
     box-sizing: border-box;
     height: 70px;
-}
-
-.aimer {
+  }
+  
+  .aimer {
     margin: 0;
     font-size: 24px;
     font-family: monospace;
     color: #fff;
-}
-
-.logo-container {
+  }
+  
+  .logo-container {
     display: flex;
     align-items: center;
-}
-
-.logo-container img {
+  }
+  
+  .logo-container img {
     height: auto;
     width: 50px;
     border-radius: 50%;
     margin-right: 10px;
-}
-
-nav {
+  }
+  
+  nav {
     display: flex;
-}
-
-.nav-icon {
+  }
+  
+  .nav-icon {
     width: 20px;
     height: 20px;
     margin-right: 5px;
-}
-
-nav a {
+  }
+  
+  nav a {
     color: rgb(255, 255, 255);
     text-decoration: none;
     margin: 0 15px;
@@ -62,137 +62,144 @@ nav a {
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
-
-nav a:hover {
+  }
+  
+  nav a:hover {
     background-color: #e4867f;
-}
-
-nav a img {
+  }
+  
+  nav a img {
     margin-right: 5px;
-}
+  }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-form {
-    background-color:#89B9AD;
-    padding: 20px;
+  .form-container {
+    background-color: #EBF3E8;
+    padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 400px;
-    text-align: center;
-    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
     margin-top: 20px;
-}
-
-h2 {
-    color: #333;
 }
 
 .role-container {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
-
 .role {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.role input {
-    display: none;
-}
-
 .role img {
-    width: 120px;
-    height: 120px;
-    cursor: pointer;
+    width: 130px;
+    height: 130px;
     border: 2px solid transparent;
     border-radius: 8px;
     margin-bottom: 5px;
+    justify-content: space-between;
     position: relative;
     transition: border 0.3s ease;
 }
 
-.role img:hover {
-    border-color: #e45555;
+h1{
+    font-size: 30px;
+    margin-left: 30%;
+    font-family: 'Arial', sans-serif;
 }
 
-.role input:checked + img {
-    border-color: #4caf50;
-    background: linear-gradient(rgba(76, 175, 80, 0.5), rgba(76, 175, 80, 0.5));
+.multi-step-form {
+    width: 450px;
 }
 
-.role-label {
-    font-weight: bold;
-    color: #333;
-    transition: color 0.3s ease;
+.form-step {
+    display: none;
 }
 
-.role input:checked + .role-label {
-    color: blue; /* Change to blue when Tutor is selected */
-}
-
-.personal-info {
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-label {
+.form-step:first-child {
     display: block;
-    margin-bottom: 8px;
-    color: #555;
 }
 
-input {
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    margin-left: 0px;
+}
+
+.input-container label {
+    margin-right: 10px;
+    padding: 10px;
+    width: 140px;
+}
+select{
+    width: 200px;
+    height: 30px;
+}
+
+.tutionDetails {
+    position: relative;
+}
+
+.tutionDetails input {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 12px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    height: 150px;
+    background-color: #d7d7d7;
+    line-height: 0.3; /* Set line height to improve vertical alignment */
+    text-align: left; /* Align the text to the left */
+    overflow: scroll; /* Hide overflowing content */
+    font-size: 20px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-.login-button {
+.paymentlabel label{
+    display: block;
+    
+}
+
+
+
+button {
     background-color: #4caf50; /* Initial background color */
     color: #fff;
     padding: 10px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    width: 100%;
+    width: 80px;
+    margin-top: 20px;
+    margin-left: 40%;
     transition: background-color 0.3s ease;
 }
 
-.login-button:hover {
-    background-color: #45a049; /* Change to green when Student is selected */
+button.prev-btn {
+    background-color: #ccc;
 }
 
-.trouble-login {
-    margin-top: 20px;
+button[type="submit"] {
+    background-color: #4285f4;
 }
 
-.help-terms {
-    text-align: center;
-    display: inline;
+button:hover {
+    background-color: #45a049;
+}
+  
+    .help-terms {
+      text-align: center;
+      display: inline;
+      color: #000000;
+  }
+  
+  .help-terms a.facebook-icon{
+    margin-left: 15px;
+  }
+  .help-terms  img{
+    width: 30px;
+    height: 30px;
+  }
+  .dot-sign {
+    font-size: 1.5em;
+    margin: 0 5px;
     color: #000000;
-}
-
-.help-terms a.facebook-icon{
-  margin-left: 15px;
-}
-.help-terms  img{
-  width: 30px;
-  height: 30px;
-}
-.dot-sign {
-  font-size: 1.5em;
-  margin: 0 5px;
-  color: #000000;
-}
+  }
