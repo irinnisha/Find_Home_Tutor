@@ -1,39 +1,38 @@
 <?php
- //require_once('db_connection.php');
-
-// Assuming your database connection is established, replace the following with your actual connection code
-$servername = "localhost:3306";
+// Connection parameters
+$host = "localhost:3306";
 $username = "root";
 $password = "";
-$dbname = "Find_Home_Tutor";
+$database = "aimers";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($host, $username, $password, $database);
 
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Process registration form submission
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Step 1 data
-    $role = $_POST["role"];
-    $email = $_POST["email"];
-    $password = password_hash($_POST["password"], PASSWORD_DEFAULT); // Hash the password
+// Retrieve data from the form
+$name = $_POST['name'];
+$email = $_POST['email'];
+$phone = $_POST['phone'];
+$facebook = $_POST['facebook'];
+$address = $_POST['address'];
+$division = $_POST['division'];
+$institution = $_POST['institution'];
+$class = $_POST['class'];
+$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    // Insert data into 'users' table
-    $stmt = $conn->prepare("INSERT INTO users (role, email, password) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $role, $email, $password);
+// SQL query to insert data into the database
+$sql = "INSERT INTO students (name, email, phone, facebook, address, division, institution, class, password)
+        VALUES ('$name', '$email', '$phone', '$facebook', '$address', '$division', '$institution', '$class', '$password')";
 
-    // Check if the insertion was successful
-    if ($stmt->execute()) {
-        echo "Registration successful!";
-    } else {
-        echo "Error: " . $stmt->error;
-    }
-
-    $stmt->close();
+// Execute the query
+if ($conn->query($sql) === TRUE) {
+    echo "Registration successful";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
 // Close the database connection

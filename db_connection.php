@@ -2,7 +2,7 @@
 $servername = "localhost:3306";
 $username = "root";
 $password = "";
-$dbname = "Find_Home_Tutor";
+$dbname = "aimers";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
