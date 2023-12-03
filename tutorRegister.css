@@ -74,7 +74,8 @@ nav a img {
 
 
 .form-container {
-    background-color: #9BBEC8;
+    background-color: #9AD0C2
+    ;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
@@ -97,9 +98,8 @@ nav a img {
 }
 
 .role img {
-    width: 120px;
-    height: 120px;
-    cursor: pointer;
+    width: 130px;
+    height: 130px;
     border: 2px solid transparent;
     border-radius: 8px;
     margin-bottom: 5px;
@@ -108,22 +108,9 @@ nav a img {
     transition: border 0.3s ease;
 }
 
-.role img:hover {
-    border-color: #c34646;
-}
-
-.role input:checked + img {
-    border-color: #4caf50;
-    background: linear-gradient(rgba(76, 175, 80, 0.5), rgba(76, 175, 80, 0.5));
-}
-
-.role-label {
-    font-weight: bold;
-    color: #333;
-    transition: color 0.3s ease;
-}
 h1{
     font-size: 30px;
+    margin-left: 160px;
     font-family: 'Arial', sans-serif;
 }
 
