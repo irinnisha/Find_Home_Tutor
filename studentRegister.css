@@ -1,19 +1,84 @@
 body {
     font-family: 'Arial', sans-serif;
-   background: linear-gradient(to right, #2e5539,#4a9862,#4ead85,#46b5a7,#4ebfc4,#92ced1 );
+    background: linear-gradient(to right, #2e5539, #4a9862, #4ead85, #46b5a7, #4ebfc4, #92ced1);
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Ensure the page takes at least the full height of the viewport */
 }
 
+header {
+    background: linear-gradient(to right, #6a737c, #bfcfe1, #aad2dd, #73bbba, #4faca1);
+    padding: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    height: 70px;
+}
+
+.aimer {
+    margin: 0;
+    font-size: 24px;
+    font-family: monospace;
+    color: #fff;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: auto;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+nav {
+    display: flex;
+}
+
+.nav-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    padding: 7px 15px;
+    background-color: #000000;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #e4867f;
+}
+
+nav a img {
+    margin-right: 5px;
+}
+
+
 .form-container {
-    background-color: #fff;
+    background-color: #9BBEC8;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    margin-top: 20px;
 }
 
 .role-container {
@@ -27,26 +92,13 @@ body {
     align-items: center;
 }
 
-.role input[value="Student"] {
-    display: none; /* Hide the default radio button */
-}
-
-.role label[for="student-radio"] {
-    background-color: green; /* Set the background color to green for the label */
-    color: white; /* Set the text color to white for better visibility */
-    padding: 8px; /* Add some padding for better styling */
-    border-radius: 4px; /* Add border-radius for rounded corners */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.role input[value="Student"]:checked + label {
-    background-color: green; /* Set a different background color when the radio button is checked */
+.role input {
+    display: none;
 }
 
 .role img {
-    width: 220px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     cursor: pointer;
     border: 2px solid transparent;
     border-radius: 8px;
@@ -56,21 +108,23 @@ body {
     transition: border 0.3s ease;
 }
 
+.role img:hover {
+    border-color: #c34646;
+}
+
+.role input:checked + img {
+    border-color: #4caf50;
+    background: linear-gradient(rgba(76, 175, 80, 0.5), rgba(76, 175, 80, 0.5));
+}
+
 .role-label {
     font-weight: bold;
     color: #333;
     transition: color 0.3s ease;
 }
-
-.progress-bar {
-    margin-bottom: 20px;
-}
-
-.progress {
-    height: 10px;
-    background-color: #4caf50;
-    width: 0;
-    transition: width 0.3s ease;
+h1{
+    font-size: 30px;
+    font-family: 'Arial', sans-serif;
 }
 
 .multi-step-form {
@@ -111,7 +165,9 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    width: 100%;
+    width: 80px;
+    margin-top: 20px;
+    margin-left: 40%;
     transition: background-color 0.3s ease;
 }
 
@@ -126,3 +182,15 @@ button[type="submit"] {
 button:hover {
     background-color: #45a049;
 }
+.help-terms a.facebook-icon{
+    margin-left: 15px;
+  }
+  .help-terms  img{
+    width: 30px;
+    height: 30px;
+  }
+  .dot-sign {
+    font-size: 1.5em;
+    margin: 0 5px;
+    color: #000000;
+  }
