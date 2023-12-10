@@ -1,187 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="tutorRegister.css">
-<title>Tutor Register</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tutorRegister.css">
+    <title>Tutor Register</title>
 </head>
 <body>
-<header>
-    <div class="logo-container">
-      <img src="Image/logo.jpeg" alt="AimerS Logo">
-      <h1 class="aimer">Aimer'S</h1>
+    <header>
+        <div class="logo-container">
+          <img src="Image/logo.jpeg" alt="AimerS Logo">
+          <h1 class="aimer">Aimer'S</h1>
+        </div>
+        <nav>
+            <a href="#"><img src="Image/explore.png" alt="Explore" class="nav-icon"> Explore</a>
+            <a href="#"><img src="Image/tutor.png" alt="Tutors" class="nav-icon"> Tutors</a>
+            <a href="login.html"><img src="Image/login.png" alt="Login" class="nav-icon"> Login</a>
+            <a href="#"><img src="Image/post.png" alt="Post" class="nav-icon"> Post A Tuition</a>
+        </nav>
+      </header>
+
+    <div class="form-container">
+        <h1>Register</h1>
+        <form id="multiStepForm" action="process_registration.php" method="post" class="multi-step-form">
+
+            <div class="form-step" data-step="1">
+                <div class="role-container">
+                    <label class="role">
+                        <img src="Image/teacher.png" alt="Student">
+                    </label>
+                </div>
+
+
+                <!-- Step 1 Form Fields -->
+                <h2>Personal Info</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+                <label for="facebook">Facebook:</label>
+                <input type="text" id="facebook" name="facebook" placeholder="Enter your Facebook username">
+                <!-- Next button -->
+                <div>
+                    <button class="next-btn" data-step="2">Next</button>
+                </div>
+            </div>
+
+            <div class="form-step" data-step="2">
+                <div class="role-container">
+                    <label class="role">
+                        <img src="Image/teacher.png" alt="Student">
+                    </label>
+                </div>
+                <!-- Step 2 Form Fields -->
+                <h2>Location Info</h2>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" placeholder="Enter your current address" required>
+
+                <label for="division">Select your division:</label>
+                <select name="division" id="division">
+                    <option value="" disabled selected>Select</option>
+                    <option value="dhaka">Dhaka</option>
+                    <option value="barishal">Barishal</option>
+                    <option value="khulna">Khulna</option>
+                    <option value="rangpur">Rangpur</option>
+                    <option value="sylhet">Sylhet</option>
+                </select>
+                <div>
+                    <button class="prev-btn" data-step="1">Previous</button>
+                    <button class="next-btn" data-step="3">Next</button>
+                </div>
+                <!-- Previous and Next buttons -->
+                
+            </div>
+
+            <div class="form-step" data-step="3">
+                <div class="role-container">
+                    <label class="role">
+                        <img src="Image/teacher.png" alt="Student">
+                    </label>
+                </div>
+
+                <!-- Step 3 Form Fields -->
+                <h2>Educational Info</h2>
+                <label for="institution">Institution:</label>
+                <input type="text" id="institution" name="institution" placeholder="Enter your institution name" required>
+
+                <label for="department">Department(short form):</label>
+                <input type="text" id="department" name="department" placeholder="Enter your department name" required>
+                
+                <label for="graduated">Are you graduated?</label>
+                <select name="graduated" id="graduated">
+                    <option value="" disabled selected>Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+                <label for="department">Graduation Year:</label>
+                <input type="text" id="graduationyear" name="graduation" required>
+                <!-- Previous and Next buttons -->
+                <div>
+                    <button class="prev-btn" data-step="2">Previous</button>
+                    <button class="next-btn" data-step="4">Next</button>
+                </div>
+            </div>
+
+            <div class="form-step" data-step="4">
+                <div class="role-container">
+                    <label class="role">
+                        <img src="Image/teacher.png" alt="Student">
+                    </label>
+                </div>
+                <!-- Step 4 Form Fields -->
+                <h2>Tuition Info</h2>
+                <label for="perclassfee">Preferred Fee(per class):</label>
+                <input type="number" id="perclassfee" name="perclassfee" required>
+
+                <label for="tuitionexyear">Tuition Experience:</label>
+                <select name="tuitionexyear" id="tuitionexyear">
+                    <option value="" disabled selected>Select</option>
+                    <option value="one">1 year</option>
+                    <option value="two">2 years</option>
+                    <option value="three">3 years or more</option>
+                </select>
+
+                <label for="permonthfee">Preferred Fee(per month):</label>
+                <input type="number" id="permonthfee" name="permonthfee" required>
+
+                <label for="notutored">No. of Students tutored:</label>
+                <input type="number" id="notutored" name="notutored" required>
+                <!-- Add your form fields for step 5 here -->
+                <div>
+                    <button class="prev-btn" data-step="3">Previous</button>
+                    <button class="next-btn" data-step="5">Next</button>
+                </div>
+            </div>
+
+            <div class="form-step" data-step="4">
+                <div class="role-container">
+                    <label class="role">
+                        <img src="Image/teacher.png" alt="Student">
+                    </label>
+                </div>
+                <!-- Step 4 Form Fields -->
+                <h2>Verification</h2>
+                <label>upload Student ID:
+                    <input type="file" name="mystudentid" accept="image/png, image/gif, image/jpeg" />
+                </label>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="confirmpassword">Confirm password:</label>
+                <input type="password" id="confirmpassword" name="confirmpassword" required>
+                <!-- Add your form fields for step 5 here -->
+                <div>
+                    <button class="prev-btn" data-step="4">Previous</button>
+                    <button type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
     </div>
-    <nav>
-        <a href="#"><img src="Image/explore.png" alt="Explore" class="nav-icon"> Explore</a>
-        <a href="#"><img src="Image/tutor.png" alt="Tutors" class="nav-icon"> Tutors</a>
-        <a href="login.html"><img src="Image/login.png" alt="Login" class="nav-icon"> Login</a>
-        <a href="#"><img src="Image/post.png" alt="Post" class="nav-icon"> Post A Tuition</a>
-    </nav>
-  </header>
+    <div class="help-terms">
+        <p>Help <span class="dot-sign">•</span> Terms of Service
+        <a href="https://www.facebook.com/hojoborolow" class="facebook-icon" target="_blank">
+          <img src="Image/facebook.png" alt="Facebook">
+        </a>
+      </p>
+    </div>
 
-<div class="form-container">
-    <h1>Register</h1>
-    <form id="multiStepForm" action="process_registration.php" method="post" class="multi-step-form">
-
-        <div class="form-step" data-step="1">
-            <div class="role-container">
-                <label class="role">
-                    <input type="radio" name="role" value="Tutor">
-                    <img src="Image/teacher.png" alt="Tutor">
-                    <span class="role-label">Tutor</span>
-                </label>
-            </div>
-
-            <!-- Step 1 Form Fields -->
-            <h2>Personal Info</h2>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
-
-            <label for="facebook">Facebook:</label>
-            <input type="text" id="facebook" name="facebook" placeholder="Enter your Facebook username">
-            <!-- Next button -->
-            <div>
-                <button class="next-btn" data-step="2">Next</button>
-            </div>
-        </div>
-
-        <div class="form-step" data-step="2">
-            <div class="role-container">
-                <label class="role">
-                    <input type="radio" name="role" value="Tutor">
-                    <img src="Image/teacher.png" alt="Tutor">
-                    <span class="role-label">Tutor</span>
-                </label>
-            </div>
-            <!-- Step 2 Form Fields -->
-            <h2>Location Info</h2>
-            <label for="address">Address:</label>
-            <input type="text" id="address" name="address" placeholder="Enter your current address" required>
-
-            <label for="division">Select your division:</label>
-            <select name="division" id="division">
-                <option value="" disabled selected>Select</option>
-                <option value="dhaka">Dhaka</option>
-                <option value="barishal">Barishal</option>
-                <option value="khulna">Khulna</option>
-                <option value="rangpur">Rangpur</option>
-                <option value="sylhet">Sylhet</option>
-            </select>
-            <div>
-                <button class="prev-btn" data-step="1">Previous</button>
-                <button class="next-btn" data-step="3">Next</button>
-            </div>
-            <!-- Previous and Next buttons -->
-            
-        </div>
-
-        <div class="form-step" data-step="3">
-            <div class="role-container">
-                <label class="role">
-                    <input type="radio" name="role" value="Tutor">
-                    <img src="Image/teacher.png" alt="Tutor">
-                    <span class="role-label">Tutor</span>
-                </label>
-            </div>
-
-            <!-- Step 3 Form Fields -->
-            <h2>Educational Info</h2>
-            <label for="institution">Institution:</label>
-            <input type="text" id="institution" name="institution" placeholder="Enter your institution name" required>
-
-            <label for="department">Department(short form):</label>
-            <input type="text" id="department" name="department" placeholder="Enter your department name" required>
-            
-            <label for="graduated">Are you graduated?</label>
-            <select name="graduated" id="graduated">
-                <option value="" disabled selected>Select</option>
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-            </select>
-            <label for="department">Graduation Year:</label>
-            <input type="text" id="graduationyear" name="graduation" required>
-            <!-- Previous and Next buttons -->
-            <div>
-                <button class="prev-btn" data-step="2">Previous</button>
-                <button class="next-btn" data-step="4">Next</button>
-            </div>
-        </div>
-
-        <div class="form-step" data-step="4">
-            <div class="role-container">
-                <label class="role">
-                    <input type="radio" name="role" value="Tutor">
-                    <img src="Image/teacher.png" alt="Tutor">
-                    <span class="role-label">Tutor</span>
-                </label>
-            </div>
-            <!-- Step 4 Form Fields -->
-            <h2>Tuition Info</h2>
-            <label for="perclassfee">Preferred Fee(per class):</label>
-            <input type="number" id="perclassfee" name="perclassfee" required>
-
-            <label for="tuitionexyear">Tuition Experience:</label>
-            <select name="tuitionexyear" id="tuitionexyear">
-                <option value="" disabled selected>Select</option>
-                <option value="one">1 year</option>
-                <option value="two">2 years</option>
-                <option value="three">3 years or more</option>
-            </select>
-
-            <label for="permonthfee">Preferred Fee(per month):</label>
-            <input type="number" id="permonthfee" name="permonthfee" required>
-
-            <label for="notutored">No. of Students tutored:</label>
-            <input type="number" id="notutored" name="notutored" required>
-            <!-- Add your form fields for step 5 here -->
-            <div>
-                <button class="prev-btn" data-step="3">Previous</button>
-                <button class="next-btn" data-step="5">Next</button>
-            </div>
-        </div>
-
-        <div class="form-step" data-step="4">
-            <div class="role-container">
-                <label class="role">
-                    <input type="radio" name="role" value="Tutor">
-                    <img src="Image/teacher.png" alt="Tutor">
-                    <span class="role-label">Tutor</span>
-                </label>
-            </div>
-            <!-- Step 4 Form Fields -->
-            <h2>Verification</h2>
-            <label>upload Student ID:
-                <input type="file" name="mystudentid" accept="image/png, image/gif, image/jpeg" />
-            </label>
-
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-
-            <label for="confirmpassword">Confirm password:</label>
-            <input type="password" id="confirmpassword" name="confirmpassword" required>
-            <!-- Add your form fields for step 5 here -->
-            <div>
-                <button class="prev-btn" data-step="4">Previous</button>
-                <button type="submit">Submit</button>
-            </div>
-        </div>
-    </form>
-</div>
-<div class="help-terms">
-    <p>Help <span class="dot-sign">•</span> Terms of Service
-    <a href="https://www.facebook.com/hojoborolow" class="facebook-icon" target="_blank">
-      <img src="Image/facebook.png" alt="Facebook">
-    </a>
-  </p>
-</div>
-
-<script src="tutorRegister.js"></script>
+    <script src="tutorRegister.js"></script>
 </body>
 </html>
