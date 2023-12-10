@@ -1,32 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="StudentRegister.css">
-    <title>Register Form</title>
-</head>
-<body>
-    <div class="form-container">
-        <div class="progress-bar">
-            <div class="progress" id="progress"></div>
-        </div>
-        <form id="multiStepForm" action="process_registration.php" method="post" class="multi-step-form">
-            
-            <div class="form-step" data-step="1">
-                <h2>Personal Information</h2>
-                <div class="role-container">
-                    <!-- Make the Tutor radio button pre-selected and disabled -->
-                    <label class="role">
-                        <input type="radio" name="role" value="Student" id="student-radio">
-                        <img src="Image/student.png" alt="Student">
-                        <span class="role-label">Student</span>
-                    </label>
-                    
-                </div>
+<!-- studentRegister.php -->
 
-                <!-- studentRegister.php -->
-
+<?php
 // Check if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Include the database connection code here (similar to process_registration.php)
@@ -58,17 +32,45 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $sql = "INSERT INTO students (name, email, phone, facebook, address, division, institution, class, password)
             VALUES ('$name', '$email', '$phone', '$facebook', '$address', '$division', '$institution', '$class', '$password')";
 
-     Execute the query
+    // Execute the query
     if ($conn->query($sql) === TRUE) {
         echo "Registration successful";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 
-     Close the database connection
+    // Close the database connection
     $conn->close();
 }
 ?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="StudentRegister.css">
+    <title>Register Form</title>
+</head>
+<body>
+    <div class="form-container">
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+        <form id="multiStepForm" action="process_registration.php" method="post" class="multi-step-form">
+            
+            <div class="form-step" data-step="1">
+                <h2>Personal Information</h2>
+                <div class="role-container">
+                    <!-- Make the Tutor radio button pre-selected and disabled -->
+                    <label class="role">
+                        <input type="radio" name="role" value="Student" id="student-radio">
+                        <img src="Image/student.png" alt="Student">
+                        <span class="role-label">Student</span>
+                    </label>
+                    
+                </div>
 
                 <!-- Step 1 Form Fields -->
                 <label for="name">Name:</label>
@@ -123,7 +125,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </label>
                     
                 </div>
-
                 <!-- Step 3 Form Fields -->
                 <label for="institution">Institution:</label>
                 <input type="text" id="institution" name="institution" placeholder="Enter your institution name" required>
